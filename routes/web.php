@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('trangchu');
 })->name('home');
+Route::get('/home', function () {
+    return view('trangchu');
+})->name('home');
+
+Route::get('/buildPC', function () {
+    return view('pcbuild');
+})->name('pcbuild');

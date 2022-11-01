@@ -11,29 +11,38 @@
 <body>
 <nav class="navbar navbar-light bg-light ml-auto">
 <div class="container-fluid">
-  <a name = "homeid"class="navbar-brand ml-auto"  href="{{ url(' ') }}">
+  <a name = "homeid"class="navbar-brand ml-auto"  href="{{ url('home') }}">
       <img src="./image/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top ml-auto">
-      N&B shop
+      N&B shop @yield('title')
     </a>
     
+    <ul class= "ml-2">
     
+  <button type="button" class="btn btn-danger"> <img src="./image/giohang.png" alt="" width="24" height="24" class="d-inline-block align-text-top ml-auto">Giỏ Hàng</button>
+  <button type="button" class="btn btn-danger"> <img src="./image/iconuser.png" alt="" width="24" height="24" class="d-inline-block align-text-top ml-auto">Đăng Nhập</button>
+ 
+  </ul>
   </div>
+
+  
 <div class="dropdown ml-auto">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
     Danh mục sản phẩm
   </button>
-  <ul class="dropdown-menu "  aria-labelledby="dropdownMenu2">
-    <li><button class="dropdown-item" type="button">Máy Tính N&B</button></li>
-    <li><button class="dropdown-item" type="button">Linh kiện máy tính</button></li>
-    <li><button class="dropdown-item" type="button">phu kiên máy tính</button></li>
+  <ul class="dropdown-menu"  >
+    <li><a class="dropdown-item" href= "{{ url('buildPC') }}">Máy Tính dựng sẵng</a></li>
+    <li><a class="dropdown-item" href= "{{ url('buildPC') }}">linh kiện máy tính</a></li>
+    <li><a class="dropdown-item" href= "{{ url('buildPC') }}">phụ kiện</a></li>
   </ul>
   
+
   </div>
   
 </nav>
+@yield('body')
 <hr class="shadow-sm" />
-		<footer align="center">Bản quyền &copy; {{ date('Y') }} bởi Nguyễn Ra Băng.
-			<p> {{ date('d-M-Y') }}</p>
+		<footer align="center">Bản quyền &copy;{{ date('Y') }}  bởi Nguyễn Ra Băng.
+    <p> {{ date('d-M-Y') }}</p>
 		</footer>
 </body>
 </html>
