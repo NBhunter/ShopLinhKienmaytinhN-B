@@ -1,1 +1,73 @@
+.searchfirst{
+    border: 2px solid #1c45dc;
+    border-radius: 25px;
+}
+h2.new-product-title {
+    margin: 0;
+    text-align: left;
+    font-size: 22px;
+    background: #d7202c;
+    padding: 10px 20px;
+    color: #fff;
+    min-width: 100%;
+    line-height: 1.;
+    display: inline-block;
+}
 
+#search1{
+    background-color: #d3d4d5;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#search2{
+    border-right:  2px solid #ffffff;
+    border-top:  2px solid #ffffff;
+    border-bottom:  2px solid #ffffff;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.navbar{
+    background-color:#fff ;
+}
+body {
+    padding: 2%;
+  
+  }
+  
+  #slideshow {
+    overflow: hidden;
+    height: 400px;
+    width: 810px;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 4050px;
+    -webkit-animation: slide 20s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 400px;
+    width: 810px;
+  }
+  
+  
+  @-webkit-keyframes slide {
+    0% {margin-left: 0px;}
+    20% {margin-left: -810px;}
+    30% {margin-left: -810px;}
+    50% {margin-left: -1620px;}
+    60% {margin-left: -1620px;}
+    70% {margin-left: -2430px;}
+    80% {margin-left: -2430px;}
+    90% {margin-left: -3240px;}
+  }
