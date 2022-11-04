@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mainpagecontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('trangchu');
-})->name('home');
-Route::get('/home', function () {
-    return view('trangchu');
-})->name('home');
+Route::get('/', [mainpagecontroller::class, 'getHome'])->name('home');
+Route::get('/home', [mainpagecontroller::class, 'getHome'])->name('home');
 
 Route::get('/buildPC', function () {
     return view('pcbuild');
