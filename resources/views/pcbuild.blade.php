@@ -1,4 +1,4 @@
-@extends('layout.Home')
+@extends('layouts.app')
 
 @section('body')
 @endsection

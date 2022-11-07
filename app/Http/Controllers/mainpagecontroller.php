@@ -8,7 +8,18 @@ class mainpagecontroller extends Controller
 {
     public function getHome()
 	{
-		$products = products::paginate(24);
-		return view('trangchu',compact('products'));
+		
+		$data['products'] = products::paginate(24);
+		return view('trangchu',compact('data'));
 	}
+	public function getDangKy()
+	{
+		return view('auth.register');
+	}
+	public function getlogin()
+	{
+		return view('auth.login');
+	}
+	
+
 }

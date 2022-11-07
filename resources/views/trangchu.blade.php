@@ -1,4 +1,4 @@
-@extends('layout.Home')
+@extends('layouts.app')
 @section('body')
 <!-- Thẻ Chứa Slideshow -->
 
@@ -23,12 +23,12 @@
 				Xem tất cả <i class="fa fa-chevron-right"></i>
 			</a>
 			<div class="row shop_container list">
-      @foreach ($products as $value)
+      @foreach ($data['products'] as $value)
 							<div class="col-lg-3 col-md-4 col-6">
 								<div class="product">
 									<div class="product_img">
 										<a href="">
-											<img src="{{  './image/products/' . $value->product_image }}" alt="product_img1" style = "max-height: 100%; " >
+											<img src="{{  './image/products/' . $value->image }}" alt="product_img1" style = "max-height: 100%; " >
 										</a>
 										<div class="product_action_box">
 											<ul class="list_none pr_action_btn">
@@ -40,10 +40,10 @@
 										</div>
 									</div>
 									<div class="product_info">
-										<h6 class="product_title"><a href="">{{$value->product_title}}</a></h6>
+										<h6 class="product_title"><a href="">{{$value->title}}</a></h6>
 										<div class="product_price">
-											<span class="price">{{ number_format($value->product_price) }}<sup>đ</sup></span>
-											<del>{{ number_format($value->product_price * 1.1) }}<sup>đ</sup></del>
+											<span class="price">{{ number_format($value->price) }}<sup>đ</sup></span>
+											<del>{{ number_format($value->price * 1.1) }}<sup>đ</sup></del>
 											<div class="on_sale">
 												<span>Giảm giá 10%</span>
 											</div>
@@ -55,7 +55,7 @@
 											
 										</div>
 										<div class="pr_desc">
-											<p>Mô tả ngắn gọn về sản phẩm {{ $value->tenproducts }}.</p>
+											<p>{{ $value->product_desc }}.</p>
 										</div>
 										<div class="pr_switch_wrap">
 											<div class="product_color_switch">
